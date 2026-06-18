@@ -1,38 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Live Leaderboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCOREBOARD</title>
 
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- SheetJS library (IMPORTANT) -->
-    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <h1>🏆 Live Leaderboard</h1>
+        <h1 class="title">
+            🏆 SCOREBOARD
+        </h1>
 
-    <div class="card">
-        <table>
-            <thead>
-                <tr>
-                    <th>Rank</th>
-                    <th>Name</th>
-                    <th>Points</th>
-                </tr>
-            </thead>
 
-            <tbody id="leaderboard-body"></tbody>
-        </table>
+        <!-- PODIUM -->
+        <div class="podium">
+
+            <!-- SECOND -->
+            <div class="card second">
+
+                <div class="medal">🥈</div>
+
+                <h2>SECOND</h2>
+
+                <h3 id="second-name">
+                    Loading...
+                </h3>
+
+                <p id="second-dept">
+                    Department
+                </p>
+
+                <span id="second-points">
+                    0 Points
+                </span>
+
+            </div>
+
+
+            <!-- FIRST -->
+            <div class="card first">
+
+                <div class="medal">🥇</div>
+
+                <h2>CHAMPION</h2>
+
+                <h3 id="first-name">
+                    Loading...
+                </h3>
+
+                <p id="first-dept">
+                    Department
+                </p>
+
+                <span id="first-points">
+                    0 Points
+                </span>
+
+            </div>
+
+
+            <!-- THIRD -->
+            <div class="card third">
+
+                <div class="medal">🥉</div>
+
+                <h2>THIRD</h2>
+
+                <h3 id="third-name">
+                    Loading...
+                </h3>
+
+                <p id="third-dept">
+                    Department
+                </p>
+
+                <span id="third-points">
+                    0 Points
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- TABLE -->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Points</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="leaderboard">
+
+                </tbody>
+
+
+            </table>
+
+        </div>
+
+
     </div>
 
-</div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
+
 </body>
+
 </html>
